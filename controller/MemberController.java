@@ -4,6 +4,7 @@ import com.bitcamp.service.MemberService;
 import com.bitcamp.domain.MemberBean;
 import javax.swing.JOptionPane;
 import com.bitcamp.domain.CustomerBean;
+import com.bitcamp.domain.AdminBean;
 public class MemberController {
 	
 	
@@ -11,7 +12,8 @@ public class MemberController {
 	public static void main(String[] args) {
 		MemberService service = new MemberServiceImpl();
 		MemberBean member = null;
-		CustomerBean cb = null;
+		CustomerBean customer= null;
+		AdminBean admin = null;
 		String temp = "";
 		String[] arr = null;
 		
@@ -27,16 +29,17 @@ public class MemberController {
 			case "1":
 				temp = JOptionPane.showInputDialog("아이디,비번,이름,주민번호,신용도");
 				arr = temp.split(",");
-				member = new CustomerBean();
-				cb.setId(arr[0]);
-				cb.setPw(arr[1]);
-				cb.setName(arr[2]);
-				cb.setSsn(arr[3]);
-				cb.setCredit(arr[4]);
+				customer = new CustomerBean();
+				customer.setId(arr[0]);
+				customer.setPw(arr[1]);
+				customer.setName(arr[2]);
+				customer.setSsn(arr[3]);
+				customer.setCredit(arr[4]);
 				break;
 				
 			case "2":
-				JOptionPane.showMessageDialog(null,service.findAllCustomers());
+				
+				
 				break;
 			default:
 				break;

@@ -1,12 +1,12 @@
 package com.bitcamp.domain;
 
 public class AdminBean extends MemberBean {
-	private int employnumber;
+	private String employnumber;
 	
-	public void setEmployNumber(int employnumber) {
+	public void setEmployNumber(String employnumber) {
 		this.employnumber = employnumber;
 	}
-	public int getEmploynumber() {
+	public String getEmploynumber() {
 		return employnumber;
 	}
 	
@@ -17,8 +17,6 @@ public class AdminBean extends MemberBean {
 				+ "3.이름 :\n"
 				+ "4.주민번호:\n"
 				+ "5.사번 :\n"
-				,super.getId(),super.getPw(),super.getName(),super.getSsn(),employnumber);
+				,getId(),getPw(),getName(),getSsn(),employnumber);
 	}
-	
-	
 }

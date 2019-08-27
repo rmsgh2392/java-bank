@@ -4,6 +4,7 @@ import com.bitcamp.domain.CustomerBean;
 import com.bitcamp.domain.AdminBean;
 public interface MemberService {
 	public void join(CustomerBean param);
+	public void register(AdminBean param);
 	public CustomerBean[] findAllCustomers();
 	public AdminBean[] findAllAdmins();
 	public MemberBean[] findByName(String name); // 고객, 사원 공용메소드

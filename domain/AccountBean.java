@@ -1,10 +1,9 @@
 package com.bitcamp.domain;
 
 public class AccountBean {
-	private int money;
-	private String accountNum,today;
+	private String accountNum,today,money;
 	
-	public void setMoney(int money) {
+	public void setMoney(String money) {
 		this.money = money;
 	}
 	public void setAccountNum(String accountNum) {
@@ -13,7 +12,7 @@ public class AccountBean {
 	public void setToday(String today) {
 		this.today = today;
 	}
-	public int getMoney() {
+	public String getMoney() {
 		return money;
 	}
 	public String getAccountNum() {
@@ -22,7 +21,13 @@ public class AccountBean {
 	public String getToday() {
 		return today;
 	}
-	
+	@Override
+	public String toString() {
+		return "AccountBean 돈 =" + money + ""
+				+ ", 계좌번호 =" + accountNum + ""
+				+ ", 거래일자 =" + today + "";
+	}
+
 	
 	
 }
